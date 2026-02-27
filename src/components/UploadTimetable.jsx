@@ -18,14 +18,22 @@ export default function UploadTimetable() {
     const reader = new FileReader();
 
     reader.onload = function (event) {
-      const content = event.target.result;
-      setFileData(content);
-      console.log("Raw File Data: ", content);
+      const data = new Uint8Array(event.target.result);
+
+      const workbook = XLSX.read(data, { type: "array" });
+
+      const sheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[sheetName];
+
+      const jsonData = XLSX.utils.sheet_to_json(worksheet);
+
+      console.log("Excel Parsed JSON:", jsonData);
+
+      setFileData(jsonData);
     };
 
-    reader.readAsText(file);
+    reader.readAsArrayBuffer(file);
   }
-
   console.log("Parsed Timetable:", parsedTimetable);
 
   return (
