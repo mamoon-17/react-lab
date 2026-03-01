@@ -1,3 +1,131 @@
+.app-container {
+  background: #232946;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-top: 2rem;
+  color: #f4f4f4;
+}
+
+.app-container h1,
+.app-container h2,
+.app-container h3,
+.app-container label,
+.app-container p,
+.app-container ul,
+.app-container li,
+.app-container table,
+.app-container th,
+.app-container td {
+  color: #f4f4f4 !important;
+}
+
+.upload-section {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.upload-card {
+  background: #232946;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem 2rem 2rem;
+  min-width: 260px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-card label {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #eebbc3 !important;
+}
+
+.upload-card input[type="file"] {
+  margin-bottom: 1.2rem;
+  color: #232946;
+  background: #f4f4f4;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+}
+
+.upload-card button {
+  background: #eebbc3;
+  color: #232946;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 600;
+}
+.upload-card button:hover {
+  background: #ffd6e0;
+}
+
+.upload-card button:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.clear-btn {
+  background: #ff4f5a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 600;
+}
+
+.clear-btn:hover {
+  background: #d43f49;
+}
+
+.export-btn {
+  background: #47a848;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 600;
+}
+
+.export-btn:hover {
+  background: #3a8c3b;
+}
+
+.empty-state {
+  background: #121629;
+  border: 2px dashed #eebbc3;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.empty-state h3 {
+  color: #eebbc3 !important;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: #b8b8b8 !important;
+  font-size: 1rem;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +167,71 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.file-name {
+  font-size: 0.95rem;
+  color: #eebbc3;
+  background: #232946;
+  border: 1px solid #eebbc3;
+  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+  margin-left: 0.2rem;
+}
+
+.app-container table {
+  background: #232946;
+  border-radius: 8px;
+  width: 100%;
+  color: #f4f4f4;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #eebbc3;
+}
+.app-container th,
+.app-container td {
+  color: #f4f4f4;
+  border: 1.5px solid #eebbc3;
+  padding: 0.7em 0.5em;
+}
+.app-container th {
+  background: #121629;
+  font-weight: 700;
+}
+
+.sortable-header {
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.sortable-header:hover {
+  background: #1a1e3a !important;
+}
+
+.app-container tr {
+  background: #232946;
+}
+.app-container tr[style*="background-color: #ffdddd"] {
+  background-color: #ff4f5a !important;
+  color: #fff !important;
+}
+.app-container tr[style*="background-color: #ff4f5a"] td {
+  background-color: #a83232 !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+.app-container tr.clash-row td {
+  background-color: #a83232 !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.app-container ul,
+.app-container li {
+  color: #f4f4f4;
+}
+
+.app-container p {
+  color: #f4f4f4;
 }
